@@ -4,7 +4,7 @@ var myDate = new Date();
     
 
     var greetingsArray = [
-        'Listening to music constantly',
+        'Listening to <a href="https://open.spotify.com/user/m4dw1kj1irhq2sc223ud92fov?si=d84d6163c890491d">music</a> constantly',
         'Automating 5 minute tasks obsessive',
         'Watching the same shows in repeat',
         'Writing scripts and playlist titles',
