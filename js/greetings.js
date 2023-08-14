@@ -9,23 +9,39 @@ var myDate = new Date();
         'Watching the same shows in repeat',
         'Writing scripts and playlist titles',
         'Probably eating something, anything',
-        'Resident technology bastard'
-
+        '<a href="https://open.spotify.com/track/2i8f4VnnBjy0yDqH2C452a">But I never said where or in whose/his sheets</a>',
+        'Stressed and constantly overdressed',
+        'Resident technology bastard'  
     ];
 
-    var randomNumber = Math.floor(Math.random()*greetingsArray.length);
-    var greet= greetingsArray[randomNumber];
-    // var greet= greetingsArray[3];
+    var randomNumber = Math.floor(Math.random() * (greetingsArray.length));
+
+    if (randomNumber % 10 == 0){
+        if (hrs < 12 && hrs >= 4)
+            greet = 'Good Morning';
+        else if (hrs >= 12 && hrs < 17)
+            greet = 'Good Afternoon';
+        else if (hrs >= 17 && hrs < 20)
+            greet = 'Good Evening';
+        else
+            greet = 'Good Night';
+    } else {
+    var greet = greetingsArray[Math.round(randomNumber / 2)];
+    }
 
 
-    // if (hrs < 12 && hrs >= 4)
-    //     greet = 'Listening to music ';
-    // else if (hrs >= 12 && hrs < 17)
-    //     greet = 'Good Afternoon';
-    // else if (hrs >= 17 && hrs < 20)
-    //     greet = 'Good Evening';
-    // else
-    //     greet = 'Good Night';
 
     document.getElementById('lblGreetings').innerHTML =
         '<b>' + greet + '</b>';
+
+
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
