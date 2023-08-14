@@ -15,8 +15,8 @@ var myDate = new Date();
     ];
 
     var randomNumber = Math.floor(Math.random() * (greetingsArray.length));
-
-    if (randomNumber % 10 == 0){
+    var randomNumber2 = Math.floor(Math.random() * 10 + 1)
+    if (randomNumber2 ==  10){
         if (hrs < 12 && hrs >= 4)
             greet = 'Good Morning';
         else if (hrs >= 12 && hrs < 17)
@@ -26,7 +26,7 @@ var myDate = new Date();
         else
             greet = 'Good Night';
     } else {
-    var greet = greetingsArray[Math.round(randomNumber / 2)];
+    var greet = greetingsArray[Math.round(randomNumber)];
     }
 
 
