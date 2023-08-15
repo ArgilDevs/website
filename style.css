@@ -296,6 +296,11 @@ body{
 .card#img {
     min-height: 620px;
     height: 740px;
+    background: linear-gradient(
+        #27282c 0%, 
+        #27282c 37%, 
+        #303135 37%, 
+        #303135 100%);
 }
 
 .card.long {
@@ -349,6 +354,8 @@ body{
 .content img {
     width: 80%;
     height: 214.39px;
+    border: 5px solid #ffffff;
+    border-radius: 7px;
 }
 
 .card#img .contnet h3 {
