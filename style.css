@@ -163,6 +163,13 @@ body{
     background-color: #e246ab!important;
 }
 
+.bghtgawm{
+    background-color: #ab0000 !important;
+}
+.bchtgawm{
+    border-color: #ab0000 !important;
+}
+
 .bginstagram {
     background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%)!important;
 
@@ -170,6 +177,10 @@ body{
 
 .txtargil{
     color: #3f6a40 !important;
+}
+
+.txthtgawm{
+    color: #ab0000 !important;
 }
 
 
@@ -192,6 +203,14 @@ body{
 }
 
 .content p a:hover{
+    filter: none !important;
+    box-shadow: none;
+    background: rgba(0, 0, 0, 0.753) !important;
+    color: rgb(255, 255, 255);
+    transform: scale(102%) translateY(-1px);
+}
+
+.content h3 a:hover{
     filter: none !important;
     box-shadow: none;
     background: rgba(0, 0, 0, 0.753) !important;
@@ -252,14 +271,48 @@ body{
     font-weight: 650;
 }
 
+hr {
+    max-width: 78.823%;
+}
+
+hr.dotted {
+    border-top: 2px dashed #505050;
+    border-bottom: 0;
+    width: 93%;
+    max-width: 93%;
+}
+
 
 .container{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    max-width: 1500px;
+    max-width: 78.823%;
     padding: 40px 0 0;
+}
+
+.video-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 78.823%;
+    padding: 40px 0 0;
+}
+
+
+.video {
+    aspect-ratio: 16 / 9;
+    width: 80%;
+}
+
+.video-container iframe {
+    justify-content: center;
+    top: 0;
+    left: 0;
+    border: 3px solid #ab0000;
+    border-radius: 12px;
 }
 
 .text-only-container {
@@ -358,6 +411,13 @@ body{
     border-radius: 7px;
 }
 
+.content img.full {
+    width: 100%;
+    height: 100%;
+    border: 3px solid #ffffff;
+    border-radius: 7px;
+}
+
 .card#img .contnet h3 {
     padding-top: 0em;
 }
@@ -380,6 +440,7 @@ body{
 
 .content p {
     font-size: 1.2em;
+    font-weight: 500;
 }
 
 ol {
@@ -400,9 +461,22 @@ ol {
     font-size: 1rem;
     transition: 0.3s;
     z-index: 1;
+    font-weight: 500;
 }
 
 .content p a {
+    text-decoration: underline;
+    background: #0000001f;
+    color: #fff;
+    margin-top: 0px;
+    transition: 0;
+    border-radius: 3px;
+    box-shadow: none;
+    padding: 0px 2px;
+    font-weight: 650;
+}
+
+.content h4 a {
     text-decoration: underline;
     background: #0000001f;
     color: #fff;
@@ -428,9 +502,129 @@ ol {
     z-index: 1;
 }
 
+.credit{
+    border: 3px #eee solid;
+    padding-top: 0px;
+    background-color: #161616;
+
+}
+
+
+/* expandable shit */
+.accordion{
+    padding-top: 10px ;
+}
+
+.accordion > input[type="checkbox"] {
+position: absolute;
+left: -100vw;
+}
+
+.accordion .text {
+overflow-y: hidden;
+height: 0;
+transition: height 1s ease;
+width: 63%;
+}
+
+.accordion .text .inside{
+    width: 100%;
+}
+
+.accordion .text h3 {
+text-align: center;
+font-weight: 800;
+font-size: 2em;
+}
+
+.accordion .text p {
+    text-align: left;
+    padding-left: 3.5%;
+}
+
+.accordion .text h4 {
+    text-align: left;
+    padding-left: 3.5%;
+    font-weight: 600;
+    font-size: 1.3em;
+
+}
+
+.accordion .text a {
+    text-align: left;
+    color: #ab0000;
+    font-weight: 800;
+    font-size: 1.4em;
+}
 
 
 
+
+
+.accordion > input[type="checkbox"]:checked ~ .text {
+height: auto;
+overflow: visible;
+transition: linear 1s ease;
+
+}
+
+.accordion label {
+display: block;
+width: 63%;
+}
+
+/*
+Styling
+*/
+body {
+font-size: 16px/1.5em;
+color: #cacaca;
+font-weight: 300;
+}
+
+.accordion {
+margin-bottom: 1em;
+}
+
+.accordion > input[type="checkbox"]:checked ~ .text {
+padding: 15px;
+border: 1px solid #e8e8e8;
+border-top: 0;
+}
+
+.accordion .handle {
+margin: 0;
+font-size: 1.125em;
+line-height: 1.2em;
+}
+
+.accordion label {
+color: #333;
+cursor: pointer;
+font-weight: 600;
+padding: 15px;
+background: #eee;
+text-align: left;
+}
+
+.accordion label:hover,
+.accordion label:focus {
+background: #dbdbdb;
+}
+
+.accordion .handle label:before {
+font-family: 'fontawesome';
+content: "\f054";
+display: inline-block;
+margin-right: 10px;
+font-size: .58em;
+line-height: 1.556em;
+vertical-align: middle;
+}
+
+.accordion > input[type="checkbox"]:checked ~ .handle label:before {
+content: "\f078";
+}
 
 
 
@@ -448,6 +642,25 @@ ol {
     .card.long{
       height: 800px;
       width: 320px;
+    }
+    .video-container{
+        max-width: 95%;
+    }
+
+    .video {
+        width: 100%;
+    }
+    .text-only-container .content h2 {
+        font-size: 1.5em;
+    }
+    .accordion{
+        padding-top: 10px ;
+    }
+    .accordion label {
+        width: 95%;
+    }
+    .accordion .text {
+        width: 95%;
     }
 }
 
