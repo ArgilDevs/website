@@ -179,6 +179,10 @@ body{
     color: #3f6a40 !important;
 }
 
+.bcargil {
+    border-color: #3f6a40 !important;
+}
+
 .txthtgawm{
     color: #ab0000 !important;
 }
@@ -502,7 +506,7 @@ ol {
     z-index: 1;
 }
 
-.credit{
+.accordion_outline {
     border: 3px #eee solid;
     padding-top: 0px;
     background-color: #161616;
@@ -532,7 +536,9 @@ width: 63%;
 }
 
 .accordion .text h3 {
-text-align: center;
+text-align: left;
+padding-left: 1.5em;
+padding-top: .5em;
 font-weight: 800;
 font-size: 2em;
 }
@@ -540,21 +546,31 @@ font-size: 2em;
 .accordion .text p {
     text-align: left;
     padding-left: 3.5%;
+
 }
 
 .accordion .text h4 {
     text-align: left;
     padding-left: 3.5%;
+    padding-right: 1.5%;
     font-weight: 600;
     font-size: 1.3em;
 
 }
 
-.accordion .text a {
+.accordion .text h4 a {
+    font-size: 1em;
+    color: rgb(237, 236, 236);
+    text-decoration:underline !important;
+}
+
+.accordion .text a  {
     text-align: left;
-    color: #ab0000;
+    color: rgb(237, 236, 236);
     font-weight: 800;
     font-size: 1.4em;
+    text-decoration:underline !important;
+
 }
 
 
@@ -571,6 +587,7 @@ transition: linear 1s ease;
 .accordion label {
 display: block;
 width: 63%;
+font-size: 1.5em;
 }
 
 /*
