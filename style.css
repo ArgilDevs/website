@@ -147,9 +147,21 @@ body{
     color: #000!important;
 }
 
+.txtimporant {
+    color: #febf00 !important;
+}
+
 .bgargil{
     background-color: #3f6a40!important;
 }
+
+.bgimportant {
+    background: linear-gradient(-90deg, #622918, #3d081c, #0f465b, #3f6a40) !important;
+    background-size: 160% 100% !important;
+	animation: gradient 50s ease infinite !important;
+    color: #eee !important;
+}
+
 
 .bginvargil{
     background-color: #c095bf!important;
@@ -644,6 +656,21 @@ content: "\f078";
 }
 
 
+
+
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
 
 
 
