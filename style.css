@@ -156,7 +156,7 @@ body{
 }
 
 .bgimportant {
-    background: linear-gradient(-90deg, #622918, #3d081c, #0f465b, #3f6a40) !important;
+    background: linear-gradient(-90deg, #3f6a40, #4c884d) !important;
     background-size: 160% 100% !important;
 	animation: gradient 50s ease infinite !important;
     color: #eee !important;
@@ -620,6 +620,12 @@ padding: 15px;
 border: 1px solid #e8e8e8;
 border-top: 0;
 }
+
+.accordion > input[type="checkbox"]:checked ~ .text.important {
+    padding: 15px;
+    border: 1px solid #4c884d;
+    border-top: 0;
+    }
 
 .accordion .handle {
 margin: 0;
