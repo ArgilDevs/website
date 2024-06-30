@@ -1,0 +1,126 @@
+/* font import */
+@font-face {
+    font-family: 'monocraft';
+    src: url("/font/Monocraft-nerd-fonts-patched.ttf")
+}
+
+
+
+/* colors */
+:root{
+    --bg-color: #090c12;
+}
+
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'monocraft';
+    font-weight: 600;
+    font-optical-sizing: auto;
+    font-style: normal;
+    display: block;
+    margin: 13px;
+    color: #C4C6D0;
+}
+
+.header {
+    margin-block-start: 0.67em;
+    margin-block-end: 0.33em;
+    text-align: center;
+    font-weight: 600;
+    font-size: 2.2em;
+    
+}
+
+nav{
+    text-align: center;
+    font-size: 1.6em;
+}
+nav a {
+    text-decoration: none;
+}
+
+hr {
+    height: 2px;
+    border: 0;
+    border-top: 3px solid #a7a7a7;
+    max-width: 1300px;
+	width: 90%;
+	margin: 15 100;
+}
+
+.mainbox {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top:1em;
+    padding-bottom: 2em;
+}
+
+
+
+.mainbox img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    box-shadow: 0 0 10px 10px rgba(25, 25, 235, 0);
+    transition: scale .3s;
+    border-radius: 50%;
+}
+
+img.icon{
+    max-width: 200px;
+    height: 200px;
+    filter: brightness(80%);
+}
+
+
+.mainbox img:hover{
+    scale: 120%;
+    filter: brightness(100%);
+}
+
+
+.maintext {
+    padding-left: 1.5em;
+    font-size: 1.6em;
+    width: 800px;
+    text-wrap: pretty;
+    word-wrap: break-word;
+}
+
+
+a {
+    text-decoration: none;
+    color: #AFB8D6;
+}
+
+a:hover{
+    filter: sepia(60%);
+    text-decoration: underline dashed;
+}
+
+
+a:visited{
+    color: rgb(175, 110, 255);
+}
+
+
+a[class^="openstab"]:not(:has(img)) {
+	background-image: url(/img/external-link.svg);
+	background-repeat: no-repeat;
+	background-position: top right;
+	padding-right: 0.8em;
+}
+
+
+
+
+
+
+
+
+
+
